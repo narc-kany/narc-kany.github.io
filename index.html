@@ -1,373 +1,317 @@
-<!DOCTYPE HTML>
-<!--
-	GitHub portfolio - Sivanesh
-	@sivanehs
--->
-<html>
-	<head>
-		<title>Sivanesh S</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sivanesh S | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+  <canvas id="webgl-canvas"></canvas>
 
-				<!-- Header -->
-					<header id="header">
-						<div class="logo">
-							<span class="icon fa-solid fa-gem"></span>
-						</div>
-						<div class="content">
-							<div class="inner">
-								<h1>Sivanesh S</h1>
-								<p>Machine Learning Engineer with 6 years experience in GenAI, Computer Vision,<br> Natural Language Processing, AI softwares.</p>
-								<p>Proficient in machine learning and operationalization; <br>adept at solving complex problems through data.</p>
-							</div>
-						</div>
-						<nav>
-							<ul>
-								<li><a href="#intro">Intro</a></li>
-								<li><a href="#work">Work</a></li>
-								<li><a href="#about">About</a></li>
-								<li><a href="#contact">Contact</a></li>
-								<!--<li><a href="#elements">Elements</a></li>-->
-							</ul>
-						</nav>
-					</header>
+<nav id="top-nav">
+    <div class="nav-brand">
+      <span class="brand-name">SIVANESH</span>
+      <div class="anim-container">
+        <ul class="anim-list">
+          <li class="anim-item">GEN-AI ENGINEER</li>
+          <li class="anim-item">ML EXPERT</li>
+          <li class="anim-item">CLOUD ARCHITECT</li>
+          <li class="anim-item">PYTHON DEV</li>
+        </ul>
+      </div>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#publications">Publications</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
-				<!-- Main -->
-					<div id="main">
+  <div id="hud">
+    <div id="hud-pct">000%</div>
+    <div class="progress-bar">
+      <div class="progress-fill" id="prog-fill"></div>
+    </div>
+    <div class="scene-label" id="scene-name">HOME</div>
+  </div>
 
-						<!-- Intro -->
-							<article id="intro">
-								<h2 class="major">Intro</h2>
-								<span class="image main"><img src="images/sivanesh02.jpg" alt="" /></span>
-								<p>I work effectively and efficiently to fulfil organisational goals while developing one's knowledge and intelligence, Working in a demanding and rewarding workplace is essential to ensuring a high degree of job satisfaction. Along with helping my business, I'm eager to learn new things myself during this process. By the way, check out my <a href="#work">awesome work</a>.</p>
-								<p>I have a natural appetite and aptitude for solving complex business challenges and using critical thinking. "Destiny is not bestowed but in turn is created." If you would like to know more about me, please reach out to me. I'm passionate about learning new technologies and solving problems; I have an appetite for solving sudokus and Rubik's cubes.I love hiking with my dog, working my way through random travel plans, and experiencing adventure at its best. I go by the quote "body is a temple", hence I'm a fitness oriented personality. I too love making public speeches and writing scientific contents.(アニメが大好き)</p>
-							</article>
+  <button id="theme-toggle" aria-label="Toggle light/dark mode">
+    <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+      <circle cx="12" cy="12" r="4" />
+      <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" />
+    </svg>
+    <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+      <path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z" />
+    </svg>
+  </button>
 
-						<!-- Work -->
-							<article id="work">
-								<h2 class="major">Work</h2>
-								<span class="image main"><img src="images/phising.jpg" alt="" /></span>
-								<p><h2>Building a Phishing Detection Model</h2>Phishing attacks continue to be a prevalent threat to individuals and organizations, leading to compromised accounts, stolen sensitive information, and financial losses. Building an effective phishing detection model is crucial to mitigate these risks. This repository contains the code and resources to develop a phishing detection model using machine learning techniques. Check out my project, <a href="https://github.com/narc-kany/Building-a-Phishing-Detection-Model" target="_blank" rel="noopener noreferrer">Building a Phishing Detection Model</a>.</p>
-								<span class="image main"><img src="images/sars_cov.jpg" alt="" /></span>
-								<p><h2>SARS-Genome</h2>SARS-Genome ML Project! This study aims to examine and comprehend the genome sequencing of Severe Acute Respiratory Syndrome (SARS) viruses using machine learning techniques. This README file offers a description of the project, its goals, and how to efficiently use the offered code and resources.	Check out my project, <a href="https://github.com/narc-kany/SARS-Genome" target="_blank" rel="noopener noreferrer">SARS-Genome</a>.</p>
-								<span class="image main"><img src="images/breast.jpg" alt="" /></span>
-								<p><h2>Breast Cancer Detection using Breast Histopathology Images and CBIS DDSM Breast</h2>Breast cancer is the most common form of cancer in women, and invasive ductal carcinoma (IDC) is the most common form of breast cancer. This project depends on two datasets: The first Dataset is cbis-ddsm-breast-cancer-image-dataset from. the second Dataset is breast-histopathology-images. Its been said to have 0.96 efficiency. Breast Cancer Detection using Breast Histopathology Images and CBIS DDSM Breast. Cancer Image Datase. Check out my project, <a href="https://github.com/narc-kany/Breast-Cancer-Detection-using-Breast-Histopathology-Images-and-CBIS-DDSM-Breast-Cancer-Image-Datase" target="_blank" rel="noopener noreferrer">Breast Cancer Detection using Breast Histopathology Images and CBIS DDSM Breast Cancer Image Datase</a>.</p>
-								<span class="image main"><img src="images/catsvsdogs.jpg" alt="" /></span>
-								<p><h2>Dogs vs Cats Redux</h2>An algorithm to classify whether images contain either a dog or a cat. This is easy for humans, dogs, and cats. Your computer will find it a bit more difficult. Check out my project, <a href="https://github.com/narc-kany/Cats-vs-Dogs" target="_blank" rel="noopener noreferrer">Dogs vs Cat </a>.</p>
-								<span class="image main"><img src="images/tomato01.jpg" alt="" /></span>
-								<p><h2>Tomato Disease Prediction</h2>Tomato is one of the most essential and consumable crops in the world. Tomatoes differ in quantity depending on how they are fertilized. Leaf disease is the primary factor impacting the amount and quality of crop yield. The Convolutional Neural Network (CNN) is used to effectively define and classify tomato diseases. Check out my project, <a href="https://github.com/narc-kany/Vegetable-disease-prediction-using-Computer-vision/tree/main/tomato_disease/tomato_training.ipynb" target="_blank" rel="noopener noreferrer">Tomato Disease Prediction</a>.</p>
-								<span class="image main"><img src="images/potato01.jpg" alt="" /></span>
-								<p><h2>Potato Disease Prediction</h2>Farmers who grow potatoes suffer from serious financial standpoint losses each year which cause several diseases that affect potato plants. The diseases Early Blight and Late Blight are the most frequent.
-									Early blight is a caused by fungus and late blight is caused by specific micro organisms and if farmers detect this disease early and apply appropriate treatment then it can save a lot of waste and prevent economical loss. The Convolutional Neural Network (CNN) is used to effectively define and classify potato diseases. Check out my project, <a href="https://github.com/narc-kany/Vegetable-disease-prediction-using-Computer-vision/blob/main/potato_disease/potato_training.ipynb" target="_blank" rel="noopener noreferrer">Tomato Disease Prediction</a>.</p>
-								<span class="image main"><img src="images/nlp01.jpg" alt="" /></span>
-								<p><h2>Chat bot using Cornell Moviedialog Corpus</h2>Naturally, frequency is considered first. But what about those phrases that are similar in meaning? For example, should thank you so much and thxbe treated independently? We don't think so. We want to group them and save our slots. How? We make use of a parallel corpus. Both thank you so much and thx are likely to be translated into the same text. Based on this assumption, we construct English synonym groups that share the same translation. Check out my project, <a href="https://www.kaggle.com/code/narckany/chat-bot-cornell-moviedialog-corpus/" target="_blank" rel="noopener noreferrer">Chat bot Cornell Moviedialog Corpus</a>.</p>
-							</article>
+  <div id="scene-strip">
+    <div class="scene-dot active"></div>
+    <div class="scene-dot"></div>
+    <div class="scene-dot"></div>
+    <div class="scene-dot"></div>
+    <div class="scene-dot"></div>
+    <div class="scene-dot"></div>
+  </div>
 
-						<!-- About -->
-							<article id="about">
-								<h2 class="major">About</h2>
-								<span class="image main"><img src="images/pic033.jpg" alt="" /></span>
-								<p> Machine Learning Engineer with 5 years experience in Computer Vision, Natural Language Processing, AI softwares. Proficient in machine learning and operationalization; adept at solving complex problems through data.</p>
-							</article>
+  <div id="scroll-container">
+    <section id="home">
+      <div class="text-card home-card">
+        <div class="tag">Profile Overview</div>
+        <h1>SIVANESH<br>S</h1>
+        <p class="body-text">
+          Senior AI Engineer with 7+ years of experience delivering enterprise-scale AI solutions, with a primary focus on Agentic AI, autonomous systems, and intelligent process orchestration. I design and deploy AI agents that can reason, plan, collaborate, and act across complex business environments, enabling organizations to automate high-value cognitive workflows and accelerate decision-making. My expertise spans multi-agent architectures, LLM-powered systems, AI orchestration frameworks, cloud-native platforms, and production-grade machine learning. I have successfully led the development of scalable AI solutions across healthcare, insurance, and financial services, transforming traditional automation into adaptive, goal-driven intelligent systems that deliver measurable business impact.
+          <br><br>
+          I earned my M.Tech in Artificial Intelligence and Machine Learning from BITS Pilani, specializing in Natural Language Processing and Generative AI. My academic research and professional experience have shaped a deep expertise in developing intelligent, autonomous AI systems that transform enterprise operations through advanced language understanding, reasoning, and workflow orchestration.
+        </p>
+        
+        <div class="stat-row">
+          <div class="stat">
+            <span class="stat-num">7+</span>
+            <span class="stat-label">Years Exp.</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">AI/ML</span>
+            <span class="stat-label">Architecture</span>
+          </div>
+        </div>
 
-						<!-- Contact -->
-							<article id="contact">
-								<h2 class="major">Contact</h2>
-								<form method="post" action="#">
-									<div class="fields">
-										<div class="field half">
-											<label for="name">Name</label>
-											<input type="text" name="name" id="name" />
-										</div>
-										<div class="field half">
-											<label for="email">Email</label>
-											<input type="text" name="email" id="email" />
-										</div>
-										<div class="field">
-											<label for="message">Message</label>
-											<textarea name="message" id="message" rows="4"></textarea>
-										</div>
-									</div>
-									<ul class="actions">
-										<li><input type="submit" value="Send Message" class="primary" /></li>
-										<li><input type="reset" value="Reset" /></li>
-									</ul>
-								</form>
-								<ul class="icons">
-									<li><a href="https://www.instagram.com/quantum_tachyon/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-									<li><a href="https://github.com/narc-kany" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-									<li><a href="https://dev.to/narckany" class="icon brands fa-dev"><span class="label">DEV</span></a></li>
-									<li><a href="https://www.kaggle.com/narckany" class="icon brands fa-kaggle"><span class="label">Kaggle</span></a></li>
-								</ul>
-							</article>
+        <a class="cta" href="#education">
+          Explore
+          <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M1 6h10M6 1l5 5-5 5" />
+          </svg>
+        </a>
+      </div>
+    </section>
 
-						<!-- Elements -->
-							<article id="elements">
-								<h2 class="major">Elements</h2>
+    <section id="education">
+      <div class="text-card right">
+        <div class="h-line"></div>
+        <div class="tag">01 — Academic Journey</div>
+        <h2>EDUCATION</h2>
+        
+        <div class="body-text">
+          <div class="edu-block">
+            <div class="edu-header">
+              <h3 class="edu-inst">BITS Pilani</h3>
+              <div class="edu-degree">Master of Technology (MTech)</div>
+              <div class="edu-major">Artificial Intelligence and Machine Learning</div>
+              <div class="edu-date">2023 - 2025</div>
+              <div class="expand-icon">+</div>
+            </div>
+            <div class="edu-details">
+              <ul class="accomplishment-list">
+                <li>Published 2 research papers in highly-regarded international journals[cite: 44].</li>
+                <li>Served as a Student Coordinator, driving advanced research activities and academic initiatives.</li>
+                <li>Founded and actively manage <a href="https://medium.com/latent-space" target="_blank" style="color: var(--accent); text-decoration: none;">Latent Space</a>, a dedicated publication house on Medium focused on AI & ML insights.</li>
+                <li>Conducted rigorous coursework experiments focusing on Quantum-Enhanced architectures and scalable LLM fine-tuning[cite: 36, 37].</li>
+              </ul>
+            </div>
+          </div>
 
-								<section>
-									<h3 class="major">Text</h3>
-									<p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
-									This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
-									This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a href="#">this is a link</a>.</p>
-									<hr />
-									<h2>Heading Level 2</h2>
-									<h3>Heading Level 3</h3>
-									<h4>Heading Level 4</h4>
-									<h5>Heading Level 5</h5>
-									<h6>Heading Level 6</h6>
-									<hr />
-									<h4>Blockquote</h4>
-									<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
-									<h4>Preformatted</h4>
-									<pre><code>i = 0;
+          <div class="edu-block">
+            <div class="edu-header">
+              <h3 class="edu-inst">Anna University</h3>
+              <div class="edu-degree">Bachelor of Engineering (BE)</div>
+              <div class="edu-major">Electrical and Electronics Engineering</div>
+              <div class="edu-date">2014 - 2018</div>
+              <div class="expand-icon">+</div>
+            </div>
+            <div class="edu-details">
+              <ul class="accomplishment-list">
+                <li>Core contributor to the eBAJA SAEINDIA team, designing and developing electric all-terrain vehicles.</li>
+                <li>Achieved official certification and worked as a Pega Senior System Architect, delivering production-ready enterprise solutions[cite: 107].</li>
+                <li>Hosted "Impulse", a highly successful National Level Technical Symposium for the Electrical and Electronics Engineering department[cite: 26].</li>
+                <li>Secured 1st Prize at the Quality Circle Forum of India (QCFI) competition for operational excellence and innovation.</li>
+                <li>Pioneered early foundational projects in intelligent automation and RPA ecosystems[cite: 88, 89].</li>
+              </ul>
+            </div>
+          </div>
+        </div>
 
-while (!deck.isInOrder()) {
-    print 'Iteration ' + i;
-    deck.shuffle();
-    i++;
-}
+      </div>
+    </section>
 
-print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
-								</section>
+    <section id="experience">
+      <div class="text-card">
+        <div class="h-line"></div>
+        <div class="tag">02 — Professional Track</div>
+        <h2>EXPERIENCE</h2>
+        
+        <div class="body-text">
+          <div class="exp-block">
+            <div class="exp-header">
+              <h3 class="exp-company">EXL</h3>
+              <div class="exp-role">Senior Machine Learning Engineer</div>
+              <div class="exp-date">March 2022 - Present</div>
+              <div class="expand-icon">+</div>
+            </div>
+            <div class="exp-details">
+              <ul class="accomplishment-list">
+                <li><strong>Agentic AI & Orchestration:</strong> Architected and deployed LangChain-powered autonomous agents equipped with modular tools, memory routing, and dynamic retrieval strategies to automate complex, multi-step cognitive workflows.</li>
+                <li>Spearheaded LLM-driven document automation pipelines using OpenAI models on Azure AI Studio, drastically enhancing intelligent summarization and data extraction.</li>
+                <li>Engineered scalable vector-augmented RAG systems using FAISS and Azure Cognitive Search to maximize response precision and lower inference latency.</li>
+                <li>Designed and fine-tuned Transformer architectures (BioGPT, ChemBERTa) for specialized NER and semantic matching.</li>
+                <li>Drove internal research on quantum-classical hybrid sequence models (Pennylane + PyTorch) for precision medicine.</li>
+              </ul>
+            </div>
+          </div>
 
-								<section>
-									<h3 class="major">Lists</h3>
+          <div class="exp-block">
+            <div class="exp-header">
+              <h3 class="exp-company">TTEC</h3>
+              <div class="exp-role">Senior Software Developer</div>
+              <div class="exp-date">January 2019 - March 2022</div>
+              <div class="expand-icon">+</div>
+            </div>
+            <div class="exp-details">
+              <ul class="accomplishment-list">
+                <li>Designed and implemented enterprise-grade RPA solutions using Automation Anywhere A360 across finance, healthcare, and telecom domains.</li>
+                <li>Developed and fine-tuned IQ Bots for intelligent document processing, automating extraction from semi-structured data with high STP accuracy.</li>
+                <li>Acted as an RPA technology SME, conducting training workshops, delivering high-impact PoCs, and driving automation opportunity assessments.</li>
+              </ul>
+            </div>
+          </div>
 
-									<h4>Unordered</h4>
-									<ul>
-										<li>Dolor pulvinar etiam.</li>
-										<li>Sagittis adipiscing.</li>
-										<li>Felis enim feugiat.</li>
-									</ul>
+          <div class="exp-block">
+            <div class="exp-header">
+              <h3 class="exp-company">Serendebyte Inc.</h3>
+              <div class="exp-role">Software Developer</div>
+              <div class="exp-date">June 2018 - January 2019</div>
+              <div class="expand-icon">+</div>
+            </div>
+            <div class="exp-details">
+              <ul class="accomplishment-list">
+                <li>Developed intelligent automation solutions using Pega v7.x/v8.x and Pega Robotics within agile SDLC environments.</li>
+                <li>Engineered custom JavaScript modules and integration connectors (REST, SOAP, SQL) to enhance UI behaviors and data integrity.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-									<h4>Alternate</h4>
-									<ul class="alt">
-										<li>Dolor pulvinar etiam.</li>
-										<li>Sagittis adipiscing.</li>
-										<li>Felis enim feugiat.</li>
-									</ul>
+    <section id="projects">
+      <div class="projects-header">
+        <div class="tag" style="text-align: center;">03 — Key Builds</div>
+        <h2 style="text-align: center;">PROJECTS</h2>
+      </div>
 
-									<h4>Ordered</h4>
-									<ol>
-										<li>Dolor pulvinar etiam.</li>
-										<li>Etiam vel felis viverra.</li>
-										<li>Felis enim feugiat.</li>
-										<li>Dolor pulvinar etiam.</li>
-										<li>Etiam vel felis lorem.</li>
-										<li>Felis enim et feugiat.</li>
-									</ol>
-									<h4>Icons</h4>
-									<ul class="icons">
-										<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-										<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
-									</ul>
+      <div class="slides-wrapper">
+        <div class="slides" id="project-slides-container">
+          <button id="slide-prev" aria-label="Previous Project">‹</button>
+          <div id="slides-track">
+            </div>
+          <button id="slide-next" aria-label="Next Project">›</button>
+        </div>
+      </div>
+    </section>
 
-									<h4>Actions</h4>
-									<ul class="actions">
-										<li><a href="#" class="button primary">Default</a></li>
-										<li><a href="#" class="button">Default</a></li>
-									</ul>
-									<ul class="actions stacked">
-										<li><a href="#" class="button primary">Default</a></li>
-										<li><a href="#" class="button">Default</a></li>
-									</ul>
-								</section>
+    <section id="publications">
+      <div class="text-card right">
+        <div class="h-line"></div>
+        <div class="tag">04 — Research</div>
+        <h2>PUBLICATIONS</h2>
+        
+        <div class="body-text">
+          <!-- Publication 1: Bhogar -->
+          <div class="pub-block">
+            <div class="pub-header">
+              <h3 class="pub-title">Bhogar: Quantum-Enhanced AI</h3>
+              <div class="pub-venue">IRJET - Volume 12, Issue 08</div>
+              <div class="expand-icon">+</div>
+            </div>
+            <div class="pub-details">
+              <div class="abstract-content">
+                <p><strong>Abstract:</strong> The confluence of quantum computing with artificial intelligence (AI) represents a paradigm change in computational drug discovery and precision medicine. This work investigates a hybrid approach that integrates Quantum Enhanced Machine Learning (QEML) with Transformer based Large Language Models (LLMs) to bypass the computational issues that are typically faced by conventional approaches to molecular modelling, drug target prediction, and patient stratification. The curse of dimensionality, non-linear feature spaces, and exponential cost of simulating molecular interactions afflict traditional ML pipelines.</p>
+                <a href="https://www.irjet.net/archives/V12/i8/IRJET-V12I849.pdf" target="_blank" class="pub-link">Read Full Paper ↗</a>
+              </div>
+            </div>
+          </div>
 
-								<section>
-									<h3 class="major">Table</h3>
-									<h4>Default</h4>
-									<div class="table-wrapper">
-										<table>
-											<thead>
-												<tr>
-													<th>Name</th>
-													<th>Description</th>
-													<th>Price</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>Item One</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Two</td>
-													<td>Vis ac commodo adipiscing arcu aliquet.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Three</td>
-													<td> Morbi faucibus arcu accumsan lorem.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Four</td>
-													<td>Vitae integer tempus condimentum.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Five</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-											</tbody>
-											<tfoot>
-												<tr>
-													<td colspan="2"></td>
-													<td>100.00</td>
-												</tr>
-											</tfoot>
-										</table>
-									</div>
+          <!-- Publication 2: PAS-FDR Framework -->
+          <div class="pub-block">
+            <div class="pub-header">
+              <h3 class="pub-title">A Multidimensional Framework for Resilient Data Infrastructure</h3>
+              <div class="pub-venue">Latent Space (Medium)</div>
+              <div class="expand-icon">+</div>
+            </div>
+            <div class="pub-details">
+              <div class="abstract-content">
+                <p><strong>Abstract:</strong> The architecture is built on a Modular Multi-Agent Ensemble, mirroring the "holistic view" of infrastructure described in the publication.</p>
+                <ul class="accomplishment-list" style="margin-top: 0.8rem;">
+                  <li><strong>Classifier Agent:</strong> Maps natural language project descriptions to the 21 CODATA activity categories (A–U), ensuring that "invisible" costs like N. Housing or R. Funding Acquisition are accounted for.</li>
+                  <li><strong>Funding Expert Agent:</strong> Utilizes a logic-driven matrix to cross-reference identified activities against nine financing sources (e.g., Project Grants, User Fees, Institutional Funding).</li>
+                  <li><strong>Compliance & Risk Agent:</strong> Performs a "stress test" on the proposed model, identifying economic paradoxes like the Prisoner's Dilemma or legal hurdles like EU Database Law.</li>
+                </ul>
+                <a href="https://medium.com/@sivanesh.developer69/a-multidimensional-framework-for-resilient-data-infrastructure-d047615fa3a1" target="_blank" class="pub-link">Read on Medium ↗</a>
+              </div>
+            </div>
+          </div>
+        </div>
 
-									<h4>Alternate</h4>
-									<div class="table-wrapper">
-										<table class="alt">
-											<thead>
-												<tr>
-													<th>Name</th>
-													<th>Description</th>
-													<th>Price</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>Item One</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Two</td>
-													<td>Vis ac commodo adipiscing arcu aliquet.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Three</td>
-													<td> Morbi faucibus arcu accumsan lorem.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Four</td>
-													<td>Vitae integer tempus condimentum.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Five</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-											</tbody>
-											<tfoot>
-												<tr>
-													<td colspan="2"></td>
-													<td>100.00</td>
-												</tr>
-											</tfoot>
-										</table>
-									</div>
-								</section>
+      </div>
+    </section>
 
-								<section>
-									<h3 class="major">Buttons</h3>
-									<ul class="actions">
-										<li><a href="#" class="button primary">Primary</a></li>
-										<li><a href="#" class="button">Default</a></li>
-									</ul>
-									<ul class="actions">
-										<li><a href="#" class="button">Default</a></li>
-										<li><a href="#" class="button small">Small</a></li>
-									</ul>
-									<ul class="actions">
-										<li><a href="#" class="button primary icon solid fa-download">Icon</a></li>
-										<li><a href="#" class="button icon solid fa-download">Icon</a></li>
-									</ul>
-									<ul class="actions">
-										<li><span class="button primary disabled">Disabled</span></li>
-										<li><span class="button disabled">Disabled</span></li>
-									</ul>
-								</section>
+    <section id="contact">
+      <div class="text-card center">
+        <div class="h-line"></div>
+        <div class="tag">05 — Get in Touch</div>
+        <h2>CONTACT</h2>
+        <p class="body-text">
+          I believe in open collaboration, research-backed implementation, and AI with real-world resonance. Let's build systems that don't just automate, rather understand.
+        </p>
 
-								<section>
-									<h3 class="major">Form</h3>
-									<form method="post" action="#">
-										<div class="fields">
-											<div class="field half">
-												<label for="demo-name">Name</label>
-												<input type="text" name="demo-name" id="demo-name" value="" placeholder="Jane Doe" />
-											</div>
-											<div class="field half">
-												<label for="demo-email">Email</label>
-												<input type="email" name="demo-email" id="demo-email" value="" placeholder="jane@untitled.tld" />
-											</div>
-											<div class="field">
-												<label for="demo-category">Category</label>
-												<select name="demo-category" id="demo-category">
-													<option value="">-</option>
-													<option value="1">Manufacturing</option>
-													<option value="1">Shipping</option>
-													<option value="1">Administration</option>
-													<option value="1">Human Resources</option>
-												</select>
-											</div>
-											<div class="field half">
-												<input type="radio" id="demo-priority-low" name="demo-priority" checked>
-												<label for="demo-priority-low">Low</label>
-											</div>
-											<div class="field half">
-												<input type="radio" id="demo-priority-high" name="demo-priority">
-												<label for="demo-priority-high">High</label>
-											</div>
-											<div class="field half">
-												<input type="checkbox" id="demo-copy" name="demo-copy">
-												<label for="demo-copy">Email me a copy</label>
-											</div>
-											<div class="field half">
-												<input type="checkbox" id="demo-human" name="demo-human" checked>
-												<label for="demo-human">Not a robot</label>
-											</div>
-											<div class="field">
-												<label for="demo-message">Message</label>
-												<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
-											</div>
-										</div>
-										<ul class="actions">
-											<li><input type="submit" value="Send Message" class="primary" /></li>
-											<li><input type="reset" value="Reset" /></li>
-										</ul>
-									</form>
-								</section>
+        <!-- Social Links (Centered and Responsive) -->
+        <div class="stat-row" style="justify-content: center; margin-bottom: 1rem;">
+          <div class="stat">
+            <a href="mailto:sivanesh.developer69@gmail.com" class="stat-num" style="font-size:1.4rem; text-decoration:none;">EMAIL</a>
+          </div>
+          <div class="stat">
+            <a href="https://github.com/narc-kany" target="_blank" class="stat-num" style="font-size:1.4rem; text-decoration:none;">GITHUB</a>
+          </div>
+          <div class="stat">
+            <a href="https://www.linkedin.com/in/sivaneshs" target="_blank" class="stat-num" style="font-size:1.4rem; text-decoration:none;">LINKEDIN</a>
+          </div>
+          <div class="stat">
+            <a href="https://medium.com/latent-space" target="_blank" class="stat-num" style="font-size:1.4rem; text-decoration:none;">MEDIUM</a>
+          </div>
+          <div class="stat">
+            <a href="https://www.instagram.com/quantum_tachyon/" target="_blank" class="stat-num" style="font-size:1.4rem; text-decoration:none;">INSTAGRAM</a>
+          </div>
+        </div>
 
-							</article>
+        <!-- Buttons Container -->
+        <div style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;">
+          
+          <!-- Download Resume Button -->
+          <!-- Make sure to place your resume PDF inside the assets folder! -->
+          <a class="cta" href="./assets/Sivanesh - AIML Engineer.pdf" download="Sivanesh_S_Resume.pdf">
+            Download Resume
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="width: 0.85rem; height: 0.85rem;">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3" />
+            </svg>
+          </a>
 
-					</div>
+          <!-- Back to Top Button -->
+          <a class="cta" href="#home">
+            Back to Top
+            <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M1 6h10M6 1l5 5-5 5" />
+            </svg>
+          </a>
 
-				<!-- Footer -->
-					<footer id="footer">
-						<p class="copyright">&copy; Name: <a href="">Sivanesh S</a></p>
-					</footer>
+        </div>
+      </div>
+    </section>    
+  </div>
 
-			</div>
-
-		<!-- BG -->
-			<div id="bg"></div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
+  <script src="script.js"></script>
+</body>
 </html>

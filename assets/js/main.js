@@ -391,11 +391,107 @@
 				$main.hide();
 				$main_articles.hide();
 
-			// Initial article.
-				if (location.hash != ''
-				&&	location.hash != '#')
-					$window.on('load', function() {
-						$main._show(location.hash.substr(1), true);
+			// Reveal sections on scroll.
+			function refreshReveal() {
+				$('.reveal').each(function() {
+					var $el = $(this);
+					var top = $el[0].getBoundingClientRect().top;
+					if (top < window.innerHeight - 120) {
+						$el.addClass('visible');
+					}
+				});
+			}
+
+			$window.on('load scroll resize', refreshReveal);
+
+			// Typewriter effect.
+			(function() {
+				var phrases = [
+					'Generative AI systems, designed for scale.',
+					'Researching adaptive RAG and knowledge graphs.',
+					'Deploying ML platforms with enterprise resilience.'
+				];
+				var index = 0;
+				var charIndex = 0;
+				var $target = $('#typewriter');
+				var isDeleting = false;
+
+				function tick() {
+					var current = phrases[index];
+					if (isDeleting) {
+						charIndex -= 1;
+					} else {
+						charIndex += 1;
+					}
+
+					$target.text(current.substring(0, charIndex));
+
+					var delay = 80;
+					if (isDeleting) delay = 40;
+
+					if (!isDeleting && charIndex === current.length) {
+						delay = 1300;
+						isDeleting = true;
+					} else if (isDeleting && charIndex === 0) {
+						isDeleting = false;
+						index = (index + 1) % phrases.length;
+						delay = 400;
+					}
+
+					setTimeout(tick, delay);
+				}
+
+				tick();
+			})();
+
+			// Project filtering.
+			$('.project-filter button').on('click', function() {
+				var filter = $(this).data('filter');
+				$('.project-filter button').removeClass('active');
+				$(this).addClass('active');
+
+				$('.project-card').each(function() {
+					var $card = $(this);
+					var category = $card.data('category');
+					if (filter === 'all' || category === filter) {
+						$card.removeClass('filtered');
+					} else {
+						$card.addClass('filtered');
+					}
+				});
+			});
+
+			// Copy email button.
+			$('.copy-email').on('click', function() {
+				var email = $(this).data('email');
+				var button = this;
+				if (navigator.clipboard && navigator.clipboard.writeText) {
+					navigator.clipboard.writeText(email).then(function() {
+						$(button).text('Copied!');
+						setTimeout(function() {
+							$(button).text('Copy Email');
+						}, 1800);
 					});
+				} else {
+					var textarea = $('<textarea>').val(email).appendTo('body');
+					textarea[0].select();
+					document.execCommand('copy');
+					textarea.remove();
+					$(button).text('Copied!');
+					setTimeout(function() {
+						$(button).text('Copy Email');
+					}, 1800);
+				}
+			});
+
+			// Initial reveal state.
+			refreshReveal();
+
+			// Initial article.
+			if (location.hash != ''
+			&&	location.hash != '#')
+				$window.on('load', function() {
+					$main._show(location.hash.substr(1), true);
+				});
 
 })(jQuery);
